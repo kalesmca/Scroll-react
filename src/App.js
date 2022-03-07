@@ -2,13 +2,16 @@ import "./styles.css";
 import React,{useState, useEffect} from 'react';
 
 export default function App() {
+  let header;
+  let sticky
   useEffect (()=>{
+    header = document.getElementById("myHeader");
+    sticky = header.offsetTop;
   },[])
 
   window.onscroll = function() {myFunction()};
 
-var header = document.getElementById("myHeader");
-var sticky = header.offsetTop;
+ 
 
 function myFunction() {
   if (window.pageYOffset > sticky) {
